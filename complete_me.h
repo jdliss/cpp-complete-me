@@ -18,5 +18,6 @@ class CompleteMe
   vector<string> suggest(string);
   vector<string> suggestSetup(string, Node*);
 
+ private:
   vector<string> split(string);
 };
