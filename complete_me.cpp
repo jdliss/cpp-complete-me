@@ -28,7 +28,7 @@ vector<string> CompleteMe::suggest(string word) {
 }
 
 vector<string> CompleteMe::suggestRecursive(string word, Node* currentNode) {
-  if (word == "") {
+  if (word == "" || word == NULL) {
     try {
       throw 1;
     }
