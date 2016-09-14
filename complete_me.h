@@ -4,8 +4,7 @@
 #include <algorithm>
 #include <iterator>
 
-class CompleteMe
-{
+class CompleteMe {
  public:
   CompleteMe();
   Node root;
