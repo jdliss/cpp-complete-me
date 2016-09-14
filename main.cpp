@@ -3,6 +3,6 @@
 int main() {
   CompleteMe complete = CompleteMe();
   complete.insert("word");
-  complete.suggest("");
+  complete.suggest("w");
   return 0;
 }

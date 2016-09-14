@@ -8,5 +8,6 @@ class Node {
  public:
   bool endOfWord;
   map<char, Node>children;
+  Node();
 };
 
