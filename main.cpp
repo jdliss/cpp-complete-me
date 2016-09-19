@@ -3,6 +3,9 @@
 int main() {
   CompleteMe complete = CompleteMe();
   complete.insert("word");
-  complete.suggest("w");
-  return 0;
+
+  vector<string> suggested = complete.suggest("o");
+  for (int i = 0; i < suggested.size(); ++i) {
+    cout << suggested[i] << endl;
+  }
 }

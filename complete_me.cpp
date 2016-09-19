@@ -33,7 +33,7 @@ vector<string> CompleteMe::suggestSetup(string word, Node* currentNode) {
       throw 1;
     }
     catch (int n) {
-      cout << "suggestRecurse input must not be empty" << endl;
+      cout << "Suggestion input must not be empty" << endl;
     }
   }
 
