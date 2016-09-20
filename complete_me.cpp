@@ -24,6 +24,14 @@ int CompleteMe::insertRecursive(string word, int n, Node* currentNode) {
 }
 
 vector<string> CompleteMe::suggest(string word) {
+  if (word == "") {
+    try {
+      throw 1;
+    }
+    catch (int n) {
+      cout << "Suggestion input must not be empty" << endl;
+    }
+  }
   return suggestSetup(word, &this->root);
 }
 
@@ -37,19 +45,12 @@ vector<string> CompleteMe::suggestSetup(string word, Node* currentNode) {
     }
   }
 
-  vector<string> chars = split(word);
-  for (int i = 0; i < chars.size(); ++i) {
-    if (this->root.children.count(*chars[i].c_str()) > 0) {
-      currentNode = &this->root.children[*chars[i].c_str()];
+  for (int i = 0; i < word.size(); ++i) {
+    if (this->root.children.count(word[i]) > 0) {
+      currentNode = &this->root.children[word[i]];
     } else {
       vector<string> none = { "No suggestions found." };
       return none;
     }
   }
-}
-
-vector<string> CompleteMe::split(string s) {
-  istringstream iss(s);
-  vector<string> tokens{ istream_iterator<string>{iss}, istream_iterator<string>{} };
-  return tokens;
 }
